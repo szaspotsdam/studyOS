@@ -1,0 +1,98 @@
+/* styles.css */
+
+.logo {
+    width: 100px; /* Anpassen der Breite des Logos nach Bedarf */
+    height: auto;
+    display: block;
+    /*margin-bottom: 20px;*/
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 80px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Courier New, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 1500px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.buttons {
+    margin-bottom: 20px;
+    
+}
+  
+.sticky { 
+     position: sticky; 
+     top: 20px;  
+     color: red; 
+     padding: 10px; 
+}
+
+.button i {
+    margin-right: 5px;
+}
+
+.myDiv{
+    border: 2px black;
+    border-style: double;
+    background-color: lightblue;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.test{    
+    border: 5px;
+    border-color: blue;
+    background-color: #bfefff;
+    border-left-style: solid;
+    padding: 7px;
+}

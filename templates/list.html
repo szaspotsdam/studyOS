@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-S7dP+3ipfZegF1BR69g5t/JH52w4Ym4QtkbAoQymVCGVYRVnV3un4UKwvk6dC35g0V3RmU4pUTdC2G6yfujMlA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Anmeldungen</title>
+</head>
+<body>
+    <div class="container">
+    	<h1>Anmeldungen</h1>
+    	<div class="buttons, sticky">
+    		<a href="/" class="button"><i class="fas fa-home"></i> Home</a>
+    		<a href="/list" class="button"><i class="fas fa-redo-alt"></i> Reload</a>
+    		<!--
+    		<form action="/delete" method="post" style="display: inline;">
+        		<button type="submit" class="button delete-button"><i class="fas fa-trash-alt"></i> Alle löschen</button>
+        	</form>
+        	--->
+    	</div>   
+    	<table border="1">
+        	<tr>
+        	    <th>ID</th>
+        	    <th>Schüler</th>
+        	    <th>Zeitpunkt</th>
+        	</tr>
+        	{% for anmeldung in anmeldungen %}
+        	<tr>
+        	    <td>{{ anmeldung[0] }}</td>
+        	    <td>{{ anmeldung[1] }}</td>
+        	    <td>{{ anmeldung[2] }}</td>
+        	</tr>
+        	{% endfor %}
+    	</table>
+    </div>
+</body>
+</html>
