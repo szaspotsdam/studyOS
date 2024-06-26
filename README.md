@@ -28,3 +28,16 @@ Wir benutzen für den Server Ubuntu und zum Programmieren der ESP32s Thonny.
 * mysql.connector -> ```pip3 install mysql-connector-python```
 
 +++ Fortsetzung folgt in Kürze +++
+
+
+### errors
+OperationalError:
+- Terminal öffnen
+- Folgende Befehle eingeben:
+1. ```ssh studyos@studyos.7ek.de```
+  Password eingeben (wenn eine Nachricht kommt 
+  dann yes eingeben
+
+2. denn Befehl aufführen
+ ```sudo systemctl restart mysql.service```
+
