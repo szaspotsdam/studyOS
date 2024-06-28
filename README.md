@@ -41,3 +41,16 @@ OperationalError:
 2. denn Befehl aufführen
  ```sudo systemctl restart mysql.service```
 
+### Nach einschalten des Computers 
+
+1. Einen Screen öffnen 
+   ```screen -S studyos```
+  Jetzt hast du ein screen gemacht der studyos heist.
+  wenn dimu nicht weiter geleitet worden bist
+  kannst du ```screen -r studyos```
+
+2. server starten
+   jetzt musst du ```start-server``` in die console eingeben. 
+
+jetzt hast du den Server gestartet. 
+
