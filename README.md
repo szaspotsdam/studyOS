@@ -22,6 +22,13 @@ Wir benutzen für den Server Ubuntu und zum Programmieren der ESP32s Thonny.
 
 ### Requirements
 
+Zur instalertion das Terminal öffnen und folgenten befehle aus führen
+
+```console
+python3 setup.py
+
+```
+
 * pip3 -> ```sudo apt install python3-pip```
 * MySQL -> ```sudo apt install mysql-server```
 * flask -> ```pip3 install flask```
