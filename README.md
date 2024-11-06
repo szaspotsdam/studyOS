@@ -1,3 +1,4 @@
+# BITTE DIE DATEI studyOS.zip HERUNTERLADEN UND ENTPACKEN!
 # studyOS
 
 Dies ist ein Projekt, welches Dima, Jeremy und Milan aus der 10 Rot des Schulzentrums am Stern in Potsdam entwickelt haben. Es dient dazu, dass sich Schülerinnen und Schüler (SuS) mit einem Chip für den Unterricht an- und abmelden können. Lehrer können sich auf einer Weboberfläche anschauen, wer aktuell da ist.
