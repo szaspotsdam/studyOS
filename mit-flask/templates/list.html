@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>Anmeldungen - {{ tutrn }}</title>
+</head>
+<body>
+    <script>
+        // Funktion zum Aktualisieren der Seite alle 15 Sekunden
+        function autoReload() {
+            setTimeout(function() {
+                location.reload();
+            }, 15000); // 15 Sekunden
+        }
+
+        // Seite beim Laden automatisch aktualisieren
+        window.onload = autoReload;
+    </script>
+    <div class="container">
+    	<h1>Anmeldungen - {{ tutrn }} - {{ schueler }}</h1>
+    	<div class="buttons sticky">
+            <a href="/list" class="button">Zurück</a>
+    		<a href="/" class="button">Home</a>
+    		<a href="/negativliste/{{ tutorium }}" class="button">Negativliste</a>
+            <a href="/logout" class="button">Logout</a>
+    	    <!-- <a href="/list" class="button"><i class="fas fa-redo-alt"></i> Reload</a> -->
+    		<a href="/download_csv/{{ tutorium }}" class="button">Download</a>    		
+    		
+    		<!-- <form action="/delete/{{ tutorium }}" method="post" style="display: inline;">
+        		<button type="submit" class="button delete-button"><i class="fas fa-trash-alt"></i> Alle löschen</button>
+        	</form> -->
+        	
+    	</div> 
+    	
+    	<div class="filter" >
+        <form action="/list/{{ tutorium }}" method="GET">
+            <label for="schueler">Filtern nach Schüler:</label>
+            <select name="schueler" id="schueler">
+                <option value="">Alle</option>
+                {% for schueler in schueler_list %}
+                    <option value="{{ schueler }}">{{ schueler }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="button">Filtern</button>
+        </form>
+        </div>  
+        
+    	<table border="1">
+            <tr>
+        	  <!--  <th>ID</th> -->
+        	    <th>Schüler</th>
+        	    <th>Zeitpunkt</th>
+        	    <th>Status<th>
+            </tr>
+            <tr>
+                <td>{{ anmeldung[0] }}</td>
+                <td>{{ anmeldung[1] }}</td>
+                <td>{{ anmeldung[2] }}</td>
+            </tr>
+                {% endfor %}
+    	</table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-S7dP+3ipfZegF1BR69g5t/JH52w4Ym4QtkbAoQymVCGVYRVnV3un4UKwvk6dC35g0V3RmU4pUTdC2G6yfujMlA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>Negativliste - {{ tutrn }}</title>
+</head>
+<body>
+<script>
+        // Funktion zum Aktualisieren der Seite alle 15 Sekunden
+        function autoReload() {
+            setTimeout(function() {
+                location.reload();
+            }, 15000); // 15 Sekunden
+        }
+
+        // Seite beim Laden automatisch aktualisieren
+        window.onload = autoReload;
+    </script>
+    <div class="container">
+        <h1>Negativliste - {{ tutrn }}</h1>
+        <div class="buttons sticky">
+            <a href="/list/{{ tutorium }}" class="button">Zurück</a>
+            <a href="/" class="button">Home</a>
+            <a href="/logout" class="button">Logout</a>
+        </div>
+        <!-- <h2>DIESE SEITE IST GERADE IM UMBAU</h2> -->
+        <h2>Diese Schüler aus {{ tutrn }} fehlen gerade:</h2>
+        <table border="1">
+            <tr>
+                <th></th>
+            </tr>
+            {% for anmeldung in anmeldungen %}
+                <tr>
+                    <td>{{ anmeldung[1] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>Tutorienauswahl</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tutorienauswahl</h1>
+        <div class="button-grid">
+            {% for tutlink in tutlinks %}
+            <a href="/list/{{ tutlink.sys_name }}" class="button">{{ tutlink.real_name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <script>alert("{{ message }}")</script>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/feedback" method="post">
+            <div class="form-group">
+                <label for="email">Ihre E-Mail-Adresse (für eine Rückmeldung):</label><br>
+                <input type="email" id="email" name="email">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="feedback">Ihr Feedback/Ihre Anmerkungen zu unserem System:</label><br>
+                <textarea style="width: 90%;" id="feedback" name="feedback" rows="10" cols="50"></textarea><br>
+            </div>
+            <br>
+            <input style="width: 90%;" type="submit" value="Senden">
+        </form>
+        <div class="buttons, sticky">
+            <a href="/" class="button">Home</a>
+            <a href="/list" class="button">Liste</a>
+            <a href="/logout" class="button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

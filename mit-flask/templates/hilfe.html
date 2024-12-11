@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studyOS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">       
+        <div class="header">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="studyOS Logo" class="logo">
+            <div class="title">
+                <h1>studyOS</h1>
+            </div>
+        </div>
+        <div class="buttons, sticky">
+             <a href="/" class="button">Zurück zur Hauptseite</a>
+        </div> 
+        <hr>
+        <p>Herzlich willkommen bei <b>studyOS</b>, einem System, das dazu dient, dass Schülerinnen und Schüler aus der Oberstufe sich für die Studierzeit anmelden können.</p>
+        <p class="test"><i><b>Hinweis: </b></i>Sie müssen sich vermutlich mit einem Passwort anmelden, um die Liste der angemeldeten Schülerinnen und Schüler zu sehen. Wenden Sie sich an Herrn Fischer, falls Sie die Zugangsdaten nicht besitzen.</p>
+        <p>Auf der Hauptseite sehen Sie einen Button, auf dem <span class="buttons, sticky, button">Zur Liste</span> steht. Dieser führt zu einer Seite, auf der Sie ihr Tutorium auswählen können.</p>
+        <hr>
+        <p>Nachdem Sie ihr Tutorium ausgewählt haben, landen Sie auf der tatsächlichen Liste. Dort sehen Sie folgendes:</p>
+        <ul>
+            <li>Eine Leiste mit verschiedenen Buttons: <span class="buttons, sticky, button">Zurück</span><span class="buttons, sticky, button">Home</span><span class="buttons, sticky, button">Negativliste</span><span class="buttons, sticky, button">Logout</span><span class="buttons, sticky, button">Download</span></li>
+            <li>Eine Tabelle</li>
+        </ul>
+        <hr>
+        <p><b>Erklärung der Elemente:</b></p>
+        <ul>
+            <li><span class="buttons, sticky, button">Zurück</span>: Auf die vorherige Seite zurückkehren</li>
+            <li><span class="buttons, sticky, button">Home</span>: Auf die Hauptseite</li>
+            <li><span class="buttons, sticky, button">Negativliste</span>: Eine Liste mit Schülerinnen und Schülern, die aktuell <b>nicht</b> da sind</li>
+            <li><span class="buttons, sticky, button">Logout</span>: Die Sitzung beenden</li>
+            <li><span class="buttons, sticky, button">Download</span>: Eine Excel-Liste mit den Anmeldungen herunterladen</li>
+        </ul>
+        <p>Die Tabelle sieht wie folgend aus:</p>
+        <table border="1">
+            <tr>
+        	    <th>Schüler</th>
+        	    <th>Zeitpunkt</th>
+        	    <th>Status<th>
+            </tr>
+            <tr>
+                <td>Mustermann Max</td>
+                <td>01.01.2024 15:10:00</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Musterfrau Mia</td>
+                <td>01.01.2024 15:00:00</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Mustermann Max</td>
+                <td>01.01.2024 12:00:00</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Musterfrau Mia</td>
+                <td>01.01.2024 11:30:00</td>
+                <td>✅</td>
+            </tr>
+    	</table>
+        <p>In der ersten Spalte sehen Sie den Klarnamen des Schülers bzw. der Schülerin. In der zweiten Spalte ist die Zeit notiert, zu der die An- bzw. Abmeldung erfolgt ist.</p>
+        <p>In der dritten Spalte ist der <b>Status</b> notiert.</p>
+        <p>✅ steht für „Anmeldung“<br>❌ steht für „Abmeldung“</p>
+    </div>
+</body>
+</html>

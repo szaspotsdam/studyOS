@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studyOS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">       
+        <div class="header">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="studyOS Logo" class="logo">
+            <div class="title">
+                <h1>🎄 studyOS 🎄</h1>
+            </div>
+        </div>
+        <div class="buttons, sticky">
+             <a href="/list" class="button">Zur Liste</a>
+             <a href="/logout" class="button">Logout</a>
+        </div> 
+        <hr>
+        <div class="test" style="padding-left: 10px;">
+            <h2>Info</h2>
+            <p style="font-size: larger;">+++ <a href="/hilfe">Hier erhalten Sie Hilfe zur Bedienung dieses Systems.</a> +++</p>
+            <p>Aktuell gibt es Probleme bei der Kommunikation zwischen den Scannern und dem Server. Wir bitten dies zu entschuldigen.</p>
+            <p><b>HINWEIS</b>: Bei manchen Geräten blinkt die gelbe LED nach der Anmeldung. Trotzdem wird die Anmeldung gespeichert! Bitte warten, bis die LED wieder konstant gelb leuchtet.</p>
+            <p><a class="button" href="/feedback">Schreiben Sie uns gerne ein Feedback</a>!</p>
+        </div>
+        <hr>
+        <h2>Letzte Änderungen</h2>
+        <ul>
+            <li>Neuer WLAN-Adapter für schnelles und zuverlässiges WLAN</li>
+            <li>Kleine Änderung für schnellere Kommunikation zwischen allen Geräten</li>
+            <li>Kleine Änderung zur Verbesserung der Datenbank-Konnektivität</li>
+            <li>Manuelles Hinzufügen von Schüler*innen</li>
+            <li>Timeout von 30 Sekunden nach einer Anmeldung (<b>TEST</b>)</li>
+        </ul>
+    </div>
+</body>
+</html>

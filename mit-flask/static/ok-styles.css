@@ -1,0 +1,103 @@
+/* Allgemeine Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%; /* Zentriert den Inhalt und begrenzt die Breite */
+    margin: 0 auto;
+    padding-top: 20px; /* Platz oben */
+}
+
+/* Header-Stil */
+
+.header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px; /* Breite des Logos */
+}
+
+.title {
+    font-size: 24px;
+}
+
+/* Sticky-Header-Stil */
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    z-index: 1000; /* Stellen Sie sicher, dass der Header über dem Inhalt liegt */
+}
+
+/* Button-Stil */
+
+.button {
+    background-color: #4CAF50; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand */
+    border: none; /* Keine Rahmen */
+    cursor: pointer; /* Zeige Cursor an, wenn über dem Button */
+    border-radius: 5px; /* Runde Ecken */
+    text-decoration: none; /* Keine Unterstreichung für Links */
+    margin-right: 10px; /* Platzierung zwischen den Buttons */
+}
+
+/* Filter-Stil */
+
+.filter {
+    margin-bottom: 20px; /* Platz unten */
+    display: flex; /* Flexbox-Layout für Filter und Buttons */
+    justify-content: space-between; /* Platz zwischen Filter und Buttons */
+    align-items: center; /* Zentriert die Elemente vertikal */
+}
+
+.filter label {
+    margin-right: 10px; /* Abstand zwischen Label und Dropdown */
+}
+
+.filter select {
+    padding: 8px; /* Innenabstand */
+    border-radius: 5px; /* Runde Ecken */
+    border: 1px solid #ccc; /* Rahmen */
+}
+
+/* Tabellenstil */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Platz oben */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Rahmen */
+    padding: 8px; /* Innenabstand */
+    text-align: left;
+}
+
+/* Media Queries für Smartphones */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%; /* Volle Breite auf kleinen Bildschirmen */
+    }
+
+    .filter {
+        flex-direction: column; /* Stapelt Filter und Buttons auf kleinen Bildschirmen */
+        margin-bottom: 10px; /* Weniger Platz unten */
+    }
+
+    .button {
+        margin-bottom: 10px; /* Weniger Platz zwischen den Buttons */
+    }
+}
+
